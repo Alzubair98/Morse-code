@@ -25,33 +25,33 @@ MORSE_DICT = {
   'x' => '-..-',
   'y' => '-.--',
   'z' => '--..'
-}
+}.frezz
 
 def decode_char(char)
   print MORSE_DICT.key(char).upcase
 end
 
-decode_char ".-"
-puts " "
+decode_char '.-'
+puts ' '
 def decode_word(word)
-  words = word.split(' ')
-  words.each { |word|
+  words = word.split
+  words.each do |word|
     decode_char(word)
-  }
+  
 end
 
-decode_word "-- -.--"
-puts " "
+decode_word '-- -.--'
+puts ' '
 
 def decode(sentence)
   sentences = sentence.split('   ')
   sentences.each { |word|
     decode_word(word)
-    print " "
+    print ' '
   }
 end
 
-decode "-- -.--   -. .- -- ."
-puts " "
+decode '-- -.--   -. .- -- .'
+puts ' '
 
-decode ".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ..."
+decode '.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'
