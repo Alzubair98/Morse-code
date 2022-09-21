@@ -28,30 +28,28 @@ MORSE_DICT = {
 }.freeze
 
 def decode_char(char)
-  print MORSE_DICT.key(char).upcase
+  MORSE_DICT.key(char).upcase
 end
 
-decode_char '.-'
-puts ' '
 def decode_word(word)
+  decoded = ''
   words = word.split
   words.each do |n|
-    decode_char(n)
+    decoded += decode_char(n)
   end
+  decoded
 end
-
-decode_word '-- -.--'
-puts ' '
 
 def decode(sentence)
+  message = ''
   sentences = sentence.split('   ')
   sentences.each do |n|
-    decode_word(n)
-    print ' '
+    message += "#{decode_word(n)} "
   end
+  message.strip
 end
 
-decode '-- -.--   -. .- -- .'
-puts ' '
-
-decode '.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'
+p decode_char '.-'
+p decode_word '-- -.--'
+p decode '-- -.--   -. .- -- .'
+p decode '.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'
