@@ -1,6 +1,6 @@
-# vet-clinic-database
+# Morse Code
 
-> A database that store the information of animals.
+> A program that decodes morse code.
 
 ## Built With :hammer_and_wrench:
 

@@ -44,3 +44,16 @@ end
 decode_word"-- -.--"
 puts " "
 
+def decode(sentence)
+  sentences = sentence.split('   ')
+  sentences.each{ 
+      |word| 
+      decode_word(word) 
+      print " "
+  }
+end
+
+decode "-- -.--   -. .- -- ."
+puts " "
+
+decode ".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ..."
